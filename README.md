@@ -310,6 +310,187 @@ SOLUTION:
 
  ```
 
+ # MySQL String  Function:
+
+ ```bash
+
+ 1. CONCAT() : Joins multiple strings
+
+    SELECT ID, CONCAT(NAME,' ',LASTNAME) AS FULLNAME FROM employees;
+ 
+    SELECT ID, CONCAT(NAME,' ',"KUMAR") AS NEWNAME FROM employees; 
+
+ 2. CONCAT_WS() :   Joins with a separator
+
+    SELECT CONCAT_WS("-",ID,NAME,DEPT) FROM employees;
+
+ 3. SUBSTRING : Extract part of string.
+    
+    SELECT SUBSTRING('COMPUTER',1,3);
+
+ 4. REPLACE: Replace text
+   
+   Syntax:
+  REPLACE(str, from, to)
+
+  EXAMPLE:
+  SELECT REPLACE('hii EveryOne','hii','Hello');
+
+ 5. REVERSE : Reverse string.
+  Syntax:
+  REVERSE(str)
+
+   Example:
+   REVERSE('abc');
+   cba
+  
+ 6.  UPPER/UCASE : Convert to uppercase.
+    Syntax:
+     UPPER(str)
+
+    Example:
+    UPPER('hello')
+     HELLO
+
+ 7. LOWER/LCASE :Convert to lowercase.
+    Syntax:
+    LOWER(str)
+    Example:
+   LOWER('HELLO')
+   hello 
+
+ 8. CHAR_LENGTH : Returns length of characters.
+   Syntax:
+   CHAR_LENGTH(str)
+   Example:
+   CHAR_LENGTH('EVERYONE')
+   8
+
+ ```
+
+# DISTINCT clause:
+In SQL, DISTINCT is used to remove duplicate rows from the result set — it only returns unique values.
+
+Syntax:
+```bash
+
+SELECT DISTINCT column1, column2, ...
+FROM table_name;
+
+```
+Example:
+
+```bash
+SELECT DISTINCT city
+FROM students;
+ 
+//it only returns unique city from students table.
+
+```
+
+# ORDER BY clause :
+In SQL, ORDER BY is used to sort the results of a query in either ascending (ASC) or descending (DESC) order.
+
+Syntax:
+
+```bash
+SELECT column1, column2, ...
+FROM table_name
+ORDER BY column_name [ASC | DESC];
+
+
+//ASC -> ascending order (smallest → largest, A → Z) → default
+
+//DESC -> descending order (largest → smallest, Z → A)
+
+````
+
+Example:
+
+```bash
+SELECT name, age
+FROM students
+ORDER BY age ASC;
+```
+
+# LIKE clause:
+In SQL, LIKE is used in a WHERE clause to search for a pattern in a column's value, often with wildcards.
+<br>
+There are two wildcards:
+<br>
+1. %  : Matches zero or more characters.
+<br>
+2. _  : Matches exactly one character.
+
+
+syntax:
+
+```bash
+SELECT column1, column2, ...
+FROM table_name
+WHERE column_name LIKE pattern;
+
+```
+
+Example:
+
+```bash
+
+1. SELECT name
+   FROM students
+   WHERE name LIKE 'Al%';   //Matches any name starting with Al.
+
+2. SELECT name
+   FROM students
+   WHERE name LIKE '%sh';   //Matches any name ending with sh.
+
+3. SELECT name
+   FROM students
+   WHERE name LIKE '%ni%';   //Matches any name containing ni.
+
+4. SELECT name
+   FROM students
+   WHERE name LIKE 'Al_ce';  //Matches names where the _ is exactly one character.
+
+ ```
+ # LIMIT clause:
+ LIMIT is used to restrict the number of rows returned in a query result.
+
+ syntax:
+
+ ```bash
+ SELECT column1, column2, ...
+ FROM table_name
+ LIMIT number_of_rows;
+ 
+ ```
+
+ Example:
+
+ ```bash
+  1.
+  SELECT *
+  FROM students
+  LIMIT 3;     //It returne first 3 rows
+
+  2.
+   SELECT *
+   FROM students
+   LIMIT 2 OFFSET 2;   //Skip first 2 rows, then return the next 2 rows.
+
+  ``` 
+
+  
+
+           
+
+
+ 
+ 
+   
+
+
+
 
 
 
