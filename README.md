@@ -875,7 +875,62 @@ CREATE TABLE contacts (
 
 ```bash
 
+1. Rename a column name:
 
+syntax:
+ALTER TABLE table_name
+RENAME COLUMN oldName TO newName;
+
+Example:
+
+ALTER TABLE contacts
+RENAME COLUMN NAME TO FNAME;
+
+2. Rename a table name:
+
+Example:
+
+ALTER TABLE contacts
+RENAME to Person;
+
+
+3. How to Modify a column : like changing data types or add default values etc.
+
+Example:
+
+ ALTER TABLE person
+ modify mobNo VARCHAR(20) DEFAULT 'UNKNOWN';
+
+ ```
+# FOREIGN KEY :
+In MySQL, a FOREIGN KEY is a constraint that creates a link between two tables.
+It ensures that the value in one column (child table) must match a value in another column (parent table), preserving referential integrity.
+
+Syntax:
+
+```bash
+CREATE TABLE child_table (
+    column_name datatype,
+    FOREIGN KEY (column_name) REFERENCES parent_table(parent_column)
+);
+```
+Example:
+
+```bash
+// parent table: customers
+
+CREATE TABLE customers (
+    customer_id INT PRIMARY KEY,
+    name VARCHAR(50)
+);
+
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    customer_id INT,
+    FOREIGN KEY (customer_id) REFERENCES customers(customer_id)
+);
+
+```
 
 
 
