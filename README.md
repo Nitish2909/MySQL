@@ -932,6 +932,8 @@ CREATE TABLE orders (
 
 ```
 
+# JOINS in MySQL :
+
 
 
 
