@@ -933,6 +933,27 @@ CREATE TABLE orders (
 ```
 
 # JOINS in MySQL :
+A JOIN is used to combine data from two or more tables based on a related column (usually a key).
+<br>
+Example:
+
+```bash
+
+Table1: students
+
+Table2: Courses
+
+we use JOINS to Combines them
+
+```
+
+<b><b>Types of JOINS</b></b>
+
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8dp7H3JCowIF6bQRNOS7BScRbCdLrg2zDeQ&s" alt="">
+
+<b>1.INNER Joins :</b>
+<br>
+
 
 
 
