@@ -953,6 +953,69 @@ we use JOINS to Combines them
 
 <b>1.INNER Joins :</b>
 <br>
+Inner Join is a type of Join. The INNER JOIN returns only rows that have matching values in both tables.
+<br>
+In Simple words we can say that INNER JOIN retruns matching rows or data from both tables.
+<br>
+
+<img src="https://www.w3schools.com/sql/img_inner_join.png" alt="">
+
+<br>
+
+Syntax:
+
+```bash
+SELECT columns
+FROM table1
+INNER JOIN table2
+ON table1.column = table2.column;
+
+
+HERE:
+● columns refers to the specific columns you want to retrieve from the tables.
+● table1 and table2 are the names of the tables you are joining.
+● column is the common column used to match rows between the tables.
+● The ON clause specifies the join condition, where you define how the tables are
+related.
+
+```
+
+Example:
+
+```bash
+Table1 -> students
+Table2 -> Courses
+
+SELECT students.Roll_No, students.FirstName, students.LastName
+FROM students
+INNER JOIN Courses ON students.Course_Id = Courses.Course_Id;
+
+```
+
+
+<b>2. LEFT JOIN:</b>
+<br>
+The LEFT JOIN returns all rows from the left table (table1), and only the matched rows from the right table (table2).
+<br>
+If there is no match in the right table, the result will still include the left table's row with NULL
+values in the right table's columns.
+
+<img src="https://www.w3schools.com/sql/img_left_join.png" alt="">
+
+Syntax:
+
+```bash
+SELECT column_name(s)
+FROM table1
+LEFT JOIN table2
+ON table1.column_name = table2.column_name;
+
+```
+
+Example:
+
+```bash
+
 
 
 
