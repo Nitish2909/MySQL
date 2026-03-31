@@ -949,7 +949,7 @@ we use JOINS to Combines them
 
 <b><b>Types of JOINS</b></b>
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8dp7H3JCowIF6bQRNOS7BScRbCdLrg2zDeQ&s" alt="">
+<img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0e377725-1e0a-400c-bab7-0099dbf1efb8_1280x1664.png" alt="">
 
 <b>1.INNER Joins :</b>
 <br>
