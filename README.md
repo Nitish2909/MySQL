@@ -1016,10 +1016,49 @@ Example:
 
 ```bash
 
+SELECT students.FirstName, Courses.Course_Name
+FROM students
+LEFT JOIN Courses
+ON students.Course_Id = Courses.Course_Id;
 
+```
 
+<b>3.RIGHT JOIN:</b>
+<br>
+The RIGHT JOIN returns all rows from the right table (table2), and only the matched rows from the left table (table1).
+<br>
+If there is no match in the left table, the result will still include the right table's row with NULL
+values in the left table's columns.
 
+<img src="https://www.w3schools.com/sql/img_right_join.png" alt="">
 
+Syntax:
+
+```bash
+SELECT column_name(s)
+FROM table1
+RIGHT JOIN table2
+ON table1.column_name = table2.column_name;
+
+```
+<b>FULL JOIN</b>
+<br>
+A FULL JOIN returns all rows from both the left and right tables, including matches and
+non-matches.
+<br>
+If there's no match, NULL values appear in columns from the table where there's no
+corresponding value.
+
+<img src="https://www.w3schools.com/sql/img_full_outer_join.png" alt="">
+
+Syntax:
+
+```bash
+SELECT column_name(s)
+FROM table1
+FULL JOIN table2
+ON table1.column_name = table2.column_name
+```
 
 
 
