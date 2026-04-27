@@ -1278,7 +1278,7 @@ Transaction is cancelled completely
 
 ```
 
-<b>Consistency (Valid State) :</b>
+<b>2. Consistency (Valid State) :</b>
 Database must remain correct before and after transaction.
 <br>
 
