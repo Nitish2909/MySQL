@@ -1184,7 +1184,7 @@ In this query
 3. Only employees earning more than the average are displayed.
 
 ```
-*** Types of Subqueries : ***
+***Types of Subqueries :***
 
 
 
