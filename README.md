@@ -1162,6 +1162,30 @@ DROP VIEW view_name;
  SHOW CREATE VIEW view_name;
  ```
 
+ # Subqueries (Nested Queries) :
+ A subquery is a SQL query written inside another query. The inner query executes
+first and its result is then used by the outer query.
+<br>
+subquery also called Nested query and inner query.
+Subqueries are mainly used to Compare values, Filter records dynamically, Perform complex conditions.
+<br>
+
+<b>Example :</b>
+
+```bash
+SELECT name 
+FROM employee
+WHERE salary > (SELECT AVG(salary) FROM employee);
+
+
+In this query
+1. The inner query calculates the average salary.
+2. The outer query compares each employee's salary with that average
+3. Only employees earning more than the average are displayed.
+
+```
+*** Types of Subqueries : ***
+
 
 
 
