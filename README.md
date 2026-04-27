@@ -1059,6 +1059,45 @@ FROM table1
 FULL JOIN table2
 ON table1.column_name = table2.column_name
 ```
+# Indexes :
+Indexes in SQL are special database structures that speed up data retrieval from a table by allowing quick access to records instead of scanning the entire table. They act like a lookup system and play an important role in improving query performance and database efficiency.
+<br>
+Always remember Primary Key and Unique constraints automatically create indexes.
+<br>
+Think of it like:
+
+```bash
+A book index  ->  instead of reading the whole book, you jump to the page 
+
+Without inde ->  MySQL scans whole table (Full Table Scan)
+
+With inde ->  MySQL directly finds data (fast lookup)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
