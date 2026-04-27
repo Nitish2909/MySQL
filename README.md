@@ -1074,6 +1074,36 @@ Without inde ->  MySQL scans whole table (Full Table Scan)
 With inde ->  MySQL directly finds data (fast lookup)
 
 ```
+<b>How to Create Indexes</b>
+
+```bash
+CREATE INDEX index_name ON table_name(column_name);
+
+```
+<b>Example :</b>
+
+```bash
+Without index:
+
+SELECT * FROM users WHERE email = 'a@gmail.com';
+
+
+With index :
+
+CREATE INDEX idx_email ON users(email);
+
+```
+
+<b>How to Check Indexes</b>
+
+```bash
+SHOW INDEX FROM table_name;
+```
+<b> How to Delete Index</b>
+
+```bash
+DROP INDEX index_name ON table_name;
+```
 
 
 
