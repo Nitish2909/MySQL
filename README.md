@@ -1105,6 +1105,64 @@ SHOW INDEX FROM table_name;
 DROP INDEX index_name ON table_name;
 ```
 
+# Views :
+A VIEW is a virtual table created using a SQL query. It does not store data physically; it stores only the query definition.
+<br>
+Views are mainly used for:
+<br>
+1. Security
+<br>
+2. Simplicity
+<br>
+3. Reusability
+
+<b>How to Create View :</b>
+
+```bash
+CREATE VIEW view_name AS
+SELECT column1, column2 FROM table_name;
+```
+<b>Example</b>
+<br>
+Create a view to display employees who earn more than 50,000.
+
+```bash
+CREATE VIEW high_salary_employees AS
+SELECT emp_id, name, salary
+FROM employee
+WHERE salary > 50000;
+
+
+
+
+In this example:
+1. The view stores the query logic.
+2.  Whenever the view is used, the query executes automatically.
+3. Helps hide unnecessary table details.
+
+```
+
+<b>How to Update View Data</b>
+
+```bash
+UPDATE view_name
+SET column_name = value
+WHERE condition;
+```
+
+<b>How to Delete View</b>
+
+```bash
+DROP VIEW view_name;
+```
+
+ <b>How to See View Definition:</b>
+
+ ```bash
+ SHOW CREATE VIEW view_name;
+ ```
+
+
 
 
 
