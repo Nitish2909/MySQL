@@ -1186,6 +1186,91 @@ In this query
 ```
 ***Types of Subqueries :***
 
+<b>1. Single-Row Subquery :</b>
+<br>
+Returns only one value
+
+```bash
+```bash
+SELECT name 
+FROM employee
+WHERE salary > (SELECT AVG(salary) FROM employee);
+
+
+In this query
+1. The inner query calculates the average salary.
+2. The outer query compares each employee's salary with that average
+3. Only employees earning more than the average are displayed.
+
+```
+<b>Multiple Row Subquery :</b>
+<br>
+Returns multiple values
+
+```bash
+SELECT name
+FROM employee
+WHERE dept_id IN (
+SELECT dept_id
+FROM department
+WHERE location = 'New Delhi')
+
+
+
+In this query
+1. The subquery returns multiple department IDs located in New Delhi.
+
+2. The outer query selects employees whose department ID matches any
+of those IDs.
+
+3. IN is used because multiple values are returned.
+
+```
+
+# Transactions & ACID Properties
+A Transaction is a group of SQL statements executed as a single unit.
+
+<b>ACID Properties :</b>
+
+```bash
+
+1. Atomicity ->  All or nothing
+
+2. Consistency -> Valid database state
+
+3. Isolation -> Independent execution
+
+4. Durability -> Permanent changes
+
+These 4 rules guarantee safe and reliable database transactions.
+
+```
+***Let's Understand with Real-Life Example (Bank Transfer Transaction)***
+
+Transfer ₹1000 from Account A -> Account B
+
+```bash
+START TRANSACTION;
+
+UPDATE accounts SET balance = balance - 1000 WHERE id = 1;
+UPDATE accounts SET balance = balance + 1000 WHERE id = 2;
+
+COMMIT;
+
+```
+
+<b>1. Atomicity (All or Nothing) :</b>
+Either all operations happen or none happen
+<br>
+
+***Example:
+₹1000 deducted from A.
+
+But system crashes before adding to B***
+
+
+
+
 
 
 
