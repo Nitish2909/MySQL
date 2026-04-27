@@ -1263,10 +1263,70 @@ COMMIT;
 Either all operations happen or none happen
 <br>
 
-***Example:
+<b>Example:
 ₹1000 deducted from A.
 
-But system crashes before adding to B***
+But system crashes before adding to B</b>
+<br>
+Result:
+
+```bash
+ROLLBACK;
+
+
+Transaction is cancelled completely
+
+```
+
+<b>Consistency (Valid State) :</b>
+Database must remain correct before and after transaction.
+<br>
+
+Example: 
+<br>
+
+Total money in system = ₹10,000 before
+<br>
+After transfer -> still ₹10,000 
+<br>
+If:
+<br>
+A loses ₹1000 but B doesn't get it -> inconsistent.
+<br>
+Rules (constraints) are always maintained
+
+
+<b>3. Isolation (No Interference) :</b>
+Multiple transactions should not affect each other
+<br>
+
+Example:
+<br>
+User1 transferring money
+<br>
+User2 checking balance at same time
+<br>
+User2 should NOT see
+
+
+<b>4. Durability (Permanent Save) : </b>
+Once transaction is committed → data is permanently stored
+<br>
+
+Example:
+<br>
+
+₹1000 successfully transferred 
+<br>
+System crashes after commit 
+<br>
+
+After restart:
+<br>
+Data is still saved
+
+
+
 
 
 
